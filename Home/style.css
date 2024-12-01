@@ -1,0 +1,92 @@
+/* General styling */
+.image-transition {
+    margin-top: 20px;
+    width: 500px; /* Default size for larger screens */
+    height: auto;
+    filter: brightness(0); /* Start with a dark image */
+    opacity: 0; /* Start with an invisible image */
+    transition: filter 1s ease-in-out, opacity 1s ease-in-out; /* Transition effect on filter and opacity */
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+  }
+  
+  /* Class to make the image bright and visible */
+  .image-light {
+    filter: brightness(1); /* Transition to a light image */
+    opacity: 1; /* Make the image fully visible */
+  }
+  
+  .main-container {
+    background: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+  }
+  
+  .heading {
+    text-align: center;
+    color: yellow;
+    margin-bottom: 20px; 
+  }
+.heading h1{
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 40px;
+}
+  
+ /* Style the anchor tag as a button */
+a.btn {
+  display: inline-block; /* Make the anchor tag behave like a block element */
+  padding: 10px 20px; /* Add padding to create a button-like shape */
+  font-size: 16px; /* Font size for the text */
+  background-color: green; /* Blue background color */
+  color: white; /* White text color */
+  text-decoration: none; /* Remove underline from the link */
+  border: none; /* Remove any default border */
+  border-radius: 5px; /* Rounded corners */
+  text-align: center; /* Center text inside the button */
+  cursor: pointer; /* Change cursor to pointer when hovering */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+a.btn:hover {
+  background-color: #e6edf5; /* Darker blue on hover */
+}
+
+  /* Phone-Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .image-transition {
+      width: 100%; /* Make image responsive by setting width to 100% */
+      max-width: 400px; /* Limit the image width on smaller screens */
+    }
+  
+    .heading {
+      font-size: 18px; /* Adjust heading font size for mobile */
+      padding: 0 10px; /* Add some padding for mobile responsiveness */
+    }
+  
+    .btn {
+      padding: 8px 16px; /* Adjust button size on smaller screens */
+      font-size: 14px; /* Make the button text slightly smaller */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .image-transition {
+      width: 100%; /* Make the image full width for very small screens */
+      max-width: 300px; /* Further limit the image size */
+    }
+  
+    .heading {
+      font-size: 16px; /* Decrease heading font size for small devices */
+    }
+  
+    .btn {
+      padding: 6px 12px; 
+      font-size: 12px; 
+    }
+  }
+  
